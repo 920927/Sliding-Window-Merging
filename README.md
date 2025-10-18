@@ -37,12 +37,10 @@ Note on package versions:
   | Vicuna-v1.3-7B | 20%, 35% | [Vicuna-v1.3-7B ](https://huggingface.co/lmsys/vicuna-7b-v1.3) 
   | Vicuna-v1.3-13B | 20%, 35% |[Vicuna-v1.3-7B ](https://huggingface.co/lmsys/vicuna-13b-v1.3) 
 
-<details>
 
 
 
-
-## Scripts of pruning method
+## 1. Scripts of pruning method
 - To try our pruning method, use:
   ```bash
   python SLM.py
@@ -56,7 +54,7 @@ Note on package versions:
   bash script/shortened-llm.sh
   ```
 
-## Scripts of lora retrain
+## 2. Scripts of lora retrain
 
 - To retrain our pruning method, use:
   ```bash
@@ -71,7 +69,7 @@ Note on package versions:
   bash LLM_Pruner/post_train.sh
   ```
 
-## Scripts of evaluation on seven commonsense reasoning tasks
+## 3. Scripts of evaluation on seven commonsense reasoning tasks
 
 - To measure accuracy of SLM, SLEB and shortened-llm pruning method on seven commonsense reasoning tasks, use: (EleutherAI/lm-evaluation-harness version [3326c54](https://github.com/EleutherAI/lm-evaluation-harness/tree/3326c547a733d598b4377e54be96e194861b964c))
   ```bash
@@ -83,12 +81,13 @@ Note on package versions:
   bash LLM_Pruner/eval.sh
   ```
 
+
 - To measure accuracy of FLAP, use: 
   ```bash
   bash script/evaluate_flap.sh
   ```
 
-## Scripts of measuring latency & throughput
+## 4. Scripts of measuring latency & throughput
 
 - SLM, SLEB and shortened-llm:
   ```bash
@@ -105,7 +104,7 @@ Note on package versions:
   bash script/measure_time_flap.sh
   ```
 
-## Integration of width-wise pruning(LLM_Pruner) and depth-wise pruning(SLM)
+## 5.Integration of width-wise pruning(LLM_Pruner) and depth-wise pruning(SLM)
 
   ```bash
   bash merge_prune.sh
@@ -115,6 +114,18 @@ Note on package versions:
 ## License
 - The intended use is strictly limited to research and non-commercial projects.
 
+If you find this work useful, please cite
+```
+@misc{ding2025slidinglayermergingmethod,
+      title={A Sliding Layer Merging Method for Efficient Depth-Wise Pruning in LLMs}, 
+      author={Xuan Ding and Rui Sun and Yunjian Zhang and Xiu Yan and Yueqi Zhou and Kaihao Huang and Suzhong Fu and Angelica I Aviles-Rivero and Chuanlong Xie and Yao Zhu},
+      year={2025},
+      eprint={2502.19159},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2502.19159}, 
+}
+```
 ## Acknowledgments
 - [LLM-Pruner](https://github.com/horseee/LLM-Pruner) and [Shortened-llm](https://github.com/Nota-NetsPresso/shortened-llm), which utilize [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness), [PEFT](https://github.com/huggingface/peft), and [Alpaca-LoRA](https://github.com/tloen/alpaca-lora). Thanks for the pioneering work on structured pruning of LLMs! 
 - [LLaMA](https://github.com/facebookresearch/llama), [Vicuna](https://github.com/lm-sys/FastChat/blob/main/docs/vicuna_weights_version.md). Thanks for the open-source LLMs and data!
