@@ -1,8 +1,8 @@
-# SLM: a sliding layer merging method
+# Sliding-Window Merging for Compacting Patch-Redundant Layers in LLMs
 
-* we proposes a sliding layer merging method that dynamically selects and fuses consecutive layers from top to bottom according to a pre-defined similarity threshold, thereby simplifying the model structure while maintaining its performance.
-* we introduces an innovative fusion of width-wise (LLM_Pruner) and depth-wise pruning  (SLM) technique
-
+* We analyze the inter-layer correlations in LLMs within a reproducing kernel Hilbert space, observing an interesting ``Patch-Like'' correlation distribution,  offering useful insights for the design of model compression strategies.
+* We propose the Sliding-Windows Merging method, which dynamically merges layers with strong representational similarity in LLMs. This method can be seamlessly applied to various LLM architectures.
+* We conduct extensive experiments across multiple LLM architectures of varying scales, demonstrating that our method outperforms existing depth-wise pruning methods in zero-shot performance, both in retraining-free scenarios and in scenarios where pruning is followed by retraining to restore quality. 
 
 
 ## Installation
@@ -129,4 +129,5 @@ If you find this work useful, please cite
 ## Acknowledgments
 - [LLM-Pruner](https://github.com/horseee/LLM-Pruner) and [Shortened-llm](https://github.com/Nota-NetsPresso/shortened-llm), which utilize [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness), [PEFT](https://github.com/huggingface/peft), and [Alpaca-LoRA](https://github.com/tloen/alpaca-lora). Thanks for the pioneering work on structured pruning of LLMs! 
 - [LLaMA](https://github.com/facebookresearch/llama), [Vicuna](https://github.com/lm-sys/FastChat/blob/main/docs/vicuna_weights_version.md). Thanks for the open-source LLMs and data!
+
 
