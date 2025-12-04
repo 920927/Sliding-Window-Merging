@@ -1,6 +1,6 @@
 # Sliding-Window Merging for Compacting Patch-Redundant Layers in LLMs [AAAI-26]
 
-![This image is not available for now.](assets/framework.pdf)
+![This image is not available for now.](assets/framework.png)
 
 * We analyze the inter-layer correlations in LLMs within a reproducing kernel Hilbert space, observing an interesting ``Patch-Like'' correlation distribution,  offering useful insights for the design of model compression strategies.
 * We propose the Sliding-Windows Merging method, which dynamically merges layers with strong representational similarity in LLMs. This method can be seamlessly applied to various LLM architectures.
@@ -131,6 +131,7 @@ If you find this work useful, please cite
 ## Acknowledgments
 - [LLM-Pruner](https://github.com/horseee/LLM-Pruner) and [Shortened-llm](https://github.com/Nota-NetsPresso/shortened-llm), which utilize [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness), [PEFT](https://github.com/huggingface/peft), and [Alpaca-LoRA](https://github.com/tloen/alpaca-lora). Thanks for the pioneering work on structured pruning of LLMs! 
 - [LLaMA](https://github.com/facebookresearch/llama), [Vicuna](https://github.com/lm-sys/FastChat/blob/main/docs/vicuna_weights_version.md). Thanks for the open-source LLMs and data!
+
 
 
 
